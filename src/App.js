@@ -1,25 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ScopedCssBaseline from "@material-ui/core/ScopedCssBaseline";
+
+import { ScoreBoard } from "./components/ScoreBoard/ScoreBoard";
+import { ResourceSelect } from "./components/ResourceSelect/ResourceSelect";
+import { ScoreCountProvider } from "./contexts/scoreContext";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ScopedCssBaseline>
+      <ScoreCountProvider>
+        <ScoreBoard />
+        <ResourceSelect />
+      </ScoreCountProvider>
+    </ScopedCssBaseline>
   );
 }
 
