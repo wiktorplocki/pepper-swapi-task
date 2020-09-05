@@ -15,7 +15,7 @@ export const apiClient = async (resource, id) => {
     }
   );
   const result = await response.json();
-  if (result.detail && result.detail === "Not found") {
+  if (!result || (result.detail && result.detail === "Not found")) {
     return apiClient(resource, id / 2);
   }
   return result;
