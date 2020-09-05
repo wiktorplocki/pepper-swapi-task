@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Paper } from "@material-ui/core";
-import { ScoreBoard } from "./ScoreBoard";
 
 export const ScoreCounter = ({ className, side, score }) => (
   <Paper className={className}>
@@ -11,7 +10,7 @@ export const ScoreCounter = ({ className, side, score }) => (
   </Paper>
 );
 
-ScoreBoard.propTypes = {
+ScoreCounter.propTypes = {
   className: PropTypes.string,
   side: PropTypes.string.isRequired,
   score: PropTypes.number,

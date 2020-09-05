@@ -31,22 +31,22 @@ export const ResourceSelect = () => {
   const STARSHIP_ATTRIBUTES = ["name", "crew", "length"];
 
   const classes = useStyles();
-  const [resource, setResource] = useState(undefined);
-  const [attribute, setAttribute] = useState(undefined);
-  const [leftSide, setLeftSide] = useState(undefined);
-  const [rightSide, setRightSide] = useState(undefined);
+  const [resource, setResource] = useState("");
+  const [attribute, setAttribute] = useState("");
+  const [leftSide, setLeftSide] = useState(null);
+  const [rightSide, setRightSide] = useState(null);
 
   const handleResourceChange = (event) => {
     setResource(event.target.value);
-    setAttribute(undefined);
-    setLeftSide(undefined);
-    setRightSide(undefined);
+    setAttribute("");
+    setLeftSide(null);
+    setRightSide(null);
   };
 
   const handleAttributeChange = (event) => {
     setAttribute(event.target.value);
-    setLeftSide(undefined);
-    setRightSide(undefined);
+    setLeftSide(null);
+    setRightSide(null);
   };
 
   const makeApiCalls = async (event) => {
